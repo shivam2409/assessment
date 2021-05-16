@@ -48,14 +48,16 @@ body {
 
 .headingList {
   text-align: left;
-  /* font: normal normal medium 18px/26px Roboto; */
+  height: 60px;
   letter-spacing: 0px;
   color: #000000;
+  width: 520px;
   opacity: 1;
   border: 1px solid #e3e3e3;
   list-style: none;
   padding: 0%;
   display: flex;
+  justify-content: space-evenly;
 }
 
 .listCon {
@@ -83,7 +85,7 @@ body {
   border: 1px solid #dbdbdb;
   border-radius: 8px;
   opacity: 1;
-  height: 70px;
+  height: 60px;
   width: 210px;
 }
 
@@ -122,11 +124,12 @@ body {
 
 .dummy-1 {
   text-align: left;
-  font: normal normal medium 18px/22px Roboto;
   letter-spacing: 0px;
   color: #000000;
   text-transform: capitalize;
   list-style: none;
+  font-weight: bold;
+  font-size: 17px;
 }
 
 /* Dashboard css */
@@ -137,4 +140,64 @@ body {
   letter-spacing: 0px;
   color: #000000;
   opacity: 1;
+}
+
+.pg-bar {
+  text-align: left;
+  font-size: 16px;
+  letter-spacing: 0px;
+  color: #4277db;
+  opacity: 1;
+}
+
+.item-border {
+  border-bottom: 1px solid #e3e3e3;
+  padding-bottom: 5px;
+}
+
+.pBar-color {
+  background: #e7f3fc;
+}
+
+.progress {
+  background-color: white;
+  height: 8px;
+}
+
+.ver-line {
+  align-self: center;
+  height: 80%;
+  width: 1px;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+}
+
+.green-box {
+  background-color: rgb(92, 240, 92);
+  height: 8px;
+  width: 12px;
+  border-radius: 7px;
+}
+
+.vio-box {
+  background-color: rgb(197, 94, 245);
+  height: 8px;
+  width: 12px;
+  border-radius: 7px;
+}
+
+.chart-info {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.chart-info div {
+  margin-left: 15px;
+}
+
+.wrapper-dp {
+  width: 150px;
+  box-sizing: border-box;
+  overflow: hidden;
 }

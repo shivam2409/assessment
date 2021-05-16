@@ -12,14 +12,14 @@ const NavStyles = styled.div`
   background: #f7fafc;
 
   button {
-    width: 90px;
-    height: 30px;
+    width: 123px;
+    height: 41px;
     background: #2569e6;
     border-radius: 7px;
     border: 0;
     color: white;
-    margin-top:5px;
-    font-size:12px
+    margin-top: 5px;
+    font-size: 12px;
   }
 
   .icons {
@@ -39,22 +39,94 @@ const Nav = () => {
   return (
     <NavStyles>
       <button>Button1</button>
-      <div className='icons'>
-        <div className='icon'>
-          <a className='nav-link' >
-            <i className='fas fa-info-circle'></i>
-          </a>
+      <div class='btn-group'>
+        <div className='icons dropdown'>
+          <div className='icon'>
+            <a
+              className='nav-link'
+              class='dropdown'
+              data-bs-toggle='dropdown'
+              aria-expanded='false'
+            >
+              <i className='fas fa-info-circle'></i>
+            </a>
+            <ul className='dropdown-menu' aria-labelledby='dropdownMenuButton1'>
+            <li className='item-border'>
+              <a className='dropdown-item'>
+              <i class="fas fa-mobile"></i>
+                {'  '}Menu Option 1
+              </a>
+            </li>
+            <li className='item-border'>
+              <a className='dropdown-item'>
+              <i class="fas fa-mobile"></i>
+                {'  '}Menu Option 2
+              </a>
+            </li>
+            <li className='item-border'>
+              <a className='dropdown-item'>
+              <i class="fas fa-mobile"></i>
+                {'  '}Menu Option 3
+              </a>
+            </li>
+          
+          </ul>
+          </div>
+
+
+          <div className='icon'>
+            <a
+              className='nav-link'
+              class='dropdown'
+              data-bs-toggle='dropdown'
+              aria-expanded='false'
+            >
+              <i className='fas fa-bell'></i>
+            </a>
+            <ul className='dropdown-menu' aria-labelledby='dropdownMenuButton1'>
+            <li className='item-border wrapper-dp'>
+              <a className='dropdown-item'>
+                <p>
+               <i class="fas fa-exclamation-circle"></i>
+
+                Lorem Ipsum is simply dummy text of 
+                the printing and typesetting industry.
+                </p>
+              </a>
+            </li>
+            <li className='item-border  wrapper-dp'>
+              <a className='dropdown-item'>
+              <p>
+               <i class="fas fa-exclamation-circle"></i>
+
+                Lorem Ipsum is simply dummy text of 
+                the printing and typesetting industry.
+                </p>
+              </a>
+            </li>
+            <li className='item-border  wrapper-dp'>
+              <a className='dropdown-item'>
+              <p>
+               <i class="fas fa-exclamation-circle"></i>
+
+                Lorem Ipsum is simply dummy text of 
+                the printing and typesetting industry.
+                </p>
+              </a>
+            </li>
+          
+          </ul>
+          </div>
+
+          <div className='icon'>
+            
+               <i className='fas fa-user'></i>
+            
+           
+          </div>
+
         </div>
-        <div className='icon'>
-          <a className='nav-link' >
-            <i className='fas fa-bell'></i>
-          </a>
-        </div>
-        <div className='icon'>
-          <a className='nav-link'>
-            <i className='fas fa-user'></i>
-          </a>
-        </div>
+
         <div className='dropdown'>
           <a
             className='dropdown-toggle'
@@ -65,43 +137,45 @@ const Nav = () => {
             Name
           </a>
           <ul className='dropdown-menu' aria-labelledby='dropdownMenuButton1'>
-            <li>
-              <a className='dropdown-item' >
+            <li className='item-border'>
+              <a className='dropdown-item'>
                 <i className='fas fa-handshake'></i>
                 {'  '}Menu 1
               </a>
             </li>
-            <li>
-              <a className='dropdown-item' >
+            <li className='item-border'>
+              <a className='dropdown-item'>
                 <i className='fas fa-handshake'></i>
                 {'  '}Menu 2
               </a>
             </li>
-            <li>
-              <a className='dropdown-item' >
+            <li className='item-border'>
+              <a className='dropdown-item'>
                 <i className='fas fa-handshake'></i>
                 {'  '}Menu 3
               </a>
             </li>
-            <li>
-              <a className='dropdown-item' >
-                Progress Bar
+            <li className='item-border pBar-color '>
+              <a className='dropdown-item'>
+                <span className='pg-bar'>Progress Bar</span>
                 (1500/2000)
               </a>
-              <div className='progress'>
-                <div
-                  className='progress-bar progress-bar-striped progress-bar-animated'
-                  role='progressbar'
-                  aria-valuenow='75'
-                  aria-valuemin='0'
-                  aria-valuemax='100'
-                  style={{ width: '75%' }}
-                ></div>
+              <div className='container '>
+                <div className='progress'>
+                  <div
+                    className=' progress-bar progress-bar-striped progress-bar-animated'
+                    role='progressbar'
+                    aria-valuenow='75'
+                    aria-valuemin='0'
+                    aria-valuemax='100'
+                    style={{ width: '75%' }}
+                  ></div>
+                </div>
               </div>
             </li>
             <li>
-              <a className='dropdown-item' >
-              <i class="fas fa-sign-out-alt"></i>
+              <a className='dropdown-item'>
+                <i class='fas fa-sign-out-alt'></i>
                 {'  '}Logout
               </a>
             </li>

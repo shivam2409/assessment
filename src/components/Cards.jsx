@@ -85,10 +85,12 @@ const data = [
     }
 ]
 
+
 const CardsWrapper = () => {
 
-    const [tab1Cards] = useState(['TYPE1', 'TYPE2', 'TYPE3', 'TYPE4']);
-    const [tab2Cards] = useState(['TYPE1', 'TYPE2']);
+
+    const [tab1Cards] = useState([{img:'fas fa-spinner',name:'TYPE1'}, {img:'far fa-check-square',name:'TYPE2'},{img:'fas fa-search',name:'TYPE3'},{img:'fas fa-download',name:'TYPE4'}]);
+    const [tab2Cards] = useState([{img:'fas fa-tasks',name:'TYPE1'}, {img:'fas fa-chalkboard-teacher',name:'TYPE2'}]);
 
     const [content, setContent] = useState(tab1Cards);
 
@@ -114,7 +116,7 @@ const CardsWrapper = () => {
             </div>
             <div className="cards-wrapper">
                 {
-                    content.map((card) => <CardStyles>{card}</CardStyles    >)
+                    content.map((card) => <CardStyles>{<div><i className={card.img}></i><span>{'   '}{card.name}</span></div>}</CardStyles    >)
                 }
             </div>
             <CardStyles>
@@ -124,17 +126,31 @@ const CardsWrapper = () => {
                 <ul className='headingList'>
                     <li className='listCon'>Heading1
                     <p className='listPera'>24,350</p>
+
                     </li>
+                       <div className='ver-line'></div>
                     <li className='listCon'>Heading2
                     <p className='listPera'>12,360</p>
                     </li>
+                    <div className='ver-line'></div>
+
                     <li className='listCon'>Heading3
                     <p className='listPera'>10,671</p>
                     </li>
+                    <div className='ver-line'></div>
+
                     <li className='listCon'>Heading4
                     <p className='listPera'>6,562</p>
                     </li>
                 </ul>
+                </div>
+                <div className="chart-info">
+                    <div className="green-box">
+                    </div>
+                    <p>Type1</p>
+                    <div className="vio-box">
+                    </div>
+                    <p>Type2</p>
                 </div>
                 <LineChart width={1000} height={456} data={data}
                     margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
