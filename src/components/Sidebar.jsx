@@ -12,7 +12,7 @@ const SidebarStyles = styled.div`
         font: normal normal 600 30px/46px Poppins;
         letter-spacing: 0px;
         color: #000000;
-        height: 60px;
+        height: 70px;
         border-bottom: 1px solid rgba(0,0,0,0.2);
         padding-left: 30px;
 
@@ -39,13 +39,8 @@ const SidebarStyles = styled.div`
                 }
                 
                 li {
-                    span.ic {
-                        display: inline-block;
-                        width: 20px;
-                        height: 20px;
-                        border-radius: 50%;
-                        background: grey;
-                    }
+                   padding-left:10px;
+                   font-size: 12px;
                 }
             }
         }
@@ -60,32 +55,34 @@ const SidebarStyles = styled.div`
 const Sidebar = () => {
     return (
         <SidebarStyles>
-            <h2>Logo</h2>
+            <h2 className='name'>LOGO</h2>
             <div className="menu-list-wrapper">
                 <div className="menu-list">
                     <ul>
                         <h1>Heading 1</h1>
-                        <li><span class="ic"></span> Menu Option 1</li>
-                        <li><span class="ic"></span> Menu Option 2</li>
-                        <li><span class="ic"></span> Menu Option 3</li>
+                        <li><i class='fas fa-th-large'></i> Menu Option 1</li>
+                        <li><i class='fas fa-th-large'></i> Menu Option 2</li>
+                        <li><i class='fas fa-th-large'></i> Menu Option 3</li>
                     </ul>
                     <ul>
                         <h1>Heading 2</h1>
-                        <li><span class="ic"></span> Menu Option 1</li>
-                        <li><span class="ic"></span> Menu Option 2</li>
+                        <li><i class='fas fa-th-large'></i> Menu Option 1</li>
+                        <li><i class='fas fa-th-large'></i> Menu Option 2</li>
                     </ul>
                     <ul>
                         <h1>Heading 3</h1>
-                        <li><span class="ic"></span> Menu Option 1</li>
-                        <li><span class="ic"></span> Menu Option 2</li>
+                        <li><i class='fas fa-th-large'></i> Menu Option 1</li>
+                        <li><i class='fas fa-th-large'></i> Menu Option 2</li>
                     </ul>
                     <ul>
                         <h1>Heading 4</h1>
-                        <li><span class="ic"></span> Menu Option 1</li>
-                        <li><span class="ic"></span> Menu Option 2</li>
+                        <li><i class='fas fa-th-large'></i> Menu Option 1</li>
+                        <li><i class='fas fa-th-large'></i> Menu Option 2</li>
                     </ul>
                 </div>
-                <h3>Logout</h3>
+                <h1 className='Lo'>
+              <i class="fas fa-sign-out-alt"></i>
+                    Logout</h1>
             </div>
         </SidebarStyles>
     );

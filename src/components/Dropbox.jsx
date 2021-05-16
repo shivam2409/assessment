@@ -16,6 +16,8 @@ const DropboxStyles = styled.div`
         height: 70px;
 
         h1 {
+            padding-left:15px;
+            font-size:35px
         }
 
         button {
@@ -48,8 +50,8 @@ const Dropbox = () => {
     return (
         <DropboxStyles height={dropBoxOpen}>
             <header>
-                <h1>Lorem, ipsum.</h1>
-                <button onClick={() => setDropBoxOpen((prev) => !prev)}>open</button>
+                <h1>Lorem Ipsum</h1>
+                <a onClick={() => setDropBoxOpen((prev) => !prev)}><i class="fas fa-chevron-down"></i></a>
             </header>
             {
                 dropBoxOpen && <ContentStyles>

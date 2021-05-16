@@ -88,7 +88,7 @@ const data = [
 const CardsWrapper = () => {
 
     const [tab1Cards] = useState(['T1 C1', 'T1 C2', 'T1 C3', 'T1 C4']);
-    const [tab2Cards] = useState(['T2 C1', 'T2 C2', 'T2 C3', 'T2 C4']);
+    const [tab2Cards] = useState(['T2 C1', 'T2 C2']);
 
     const [content, setContent] = useState(tab1Cards);
 
@@ -109,7 +109,7 @@ const CardsWrapper = () => {
     return (
         <CardsWrapperStyles>
             <div className="btn-wrapper">
-                <Button onClick={tabClickHandler} selected={tab === 1} name="1">Tab 1</Button>
+                <Button onClick={tabClickHandler} selected={tab === 1} name="1"><i class="fas fa-spinner-third"></i>Tab 1</Button>
                 <Button onClick={tabClickHandler} selected={tab === 2} name="2">Tab 2</Button>
             </div>
             <div className="cards-wrapper">
@@ -118,8 +118,26 @@ const CardsWrapper = () => {
                 }
             </div>
             <CardStyles>
-
+                <div className='cardHeading'>
+                <h3>Analytics</h3>
                 <button onClick={() => setOpen(true)}>Calendar</button>
+                <div className='headingList'>
+                    <h4>Heading1</h4>
+                    <p>24,350</p>
+                </div>
+                <div className='headingList'>
+                    <h4>Heading2</h4>
+                    <p>12,360</p>
+                </div>
+                <div className='headingList'>
+                    <h4>Heading3</h4>
+                    <p>10,671</p>
+                </div>
+                <div className='headingList'>
+                    <h4>Heading4</h4>
+                    <p>6,562</p>
+                </div>
+                </div>
                 <LineChart width={1000} height={456} data={data}
                     margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
                     <CartesianGrid strokeDasharray="3 3" />
