@@ -40,7 +40,7 @@ const SidebarStyles = styled.div`
                 
                 li {
                    padding-left:10px;
-                   font-size: 12px;
+                   font: normal normal normal 13px/20px Poppins;
                 }
             }
         }

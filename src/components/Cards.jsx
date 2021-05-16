@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { CartesianGrid, Legend, Line, LineChart, Tooltip, XAxis, YAxis } from "recharts";
 import styled from "styled-components";
-import { DateRangePicker, DateRange } from "materialui-daterange-picker";
+import { DateRangePicker} from "materialui-daterange-picker";
 
 
 const CardsWrapperStyles = styled.div`
@@ -87,8 +87,8 @@ const data = [
 
 const CardsWrapper = () => {
 
-    const [tab1Cards] = useState(['T1 C1', 'T1 C2', 'T1 C3', 'T1 C4']);
-    const [tab2Cards] = useState(['T2 C1', 'T2 C2']);
+    const [tab1Cards] = useState(['TYPE1', 'TYPE2', 'TYPE3', 'TYPE4']);
+    const [tab2Cards] = useState(['TYPE1', 'TYPE2']);
 
     const [content, setContent] = useState(tab1Cards);
 
@@ -102,7 +102,7 @@ const CardsWrapper = () => {
 
     useEffect(() => {
         setContent(tab === 1 ? tab1Cards : tab2Cards)
-    }, [tab])
+    }, [tab,tab1Cards,tab2Cards])
 
     const tabClickHandler = (e) => setTab(+e.target.name);
 
@@ -120,23 +120,21 @@ const CardsWrapper = () => {
             <CardStyles>
                 <div className='cardHeading'>
                 <h3>Analytics</h3>
-                <button onClick={() => setOpen(true)}>Calendar</button>
-                <div className='headingList'>
-                    <h4>Heading1</h4>
-                    <p>24,350</p>
-                </div>
-                <div className='headingList'>
-                    <h4>Heading2</h4>
-                    <p>12,360</p>
-                </div>
-                <div className='headingList'>
-                    <h4>Heading3</h4>
-                    <p>10,671</p>
-                </div>
-                <div className='headingList'>
-                    <h4>Heading4</h4>
-                    <p>6,562</p>
-                </div>
+                <button className='btn-calender' onClick={() => setOpen(true)}><span className='cal-text'>Sept20,2020 - Jan20,2020 <i class="far fa-calendar"></i></span></button>
+                <ul className='headingList'>
+                    <li className='listCon'>Heading1
+                    <p className='listPera'>24,350</p>
+                    </li>
+                    <li className='listCon'>Heading2
+                    <p className='listPera'>12,360</p>
+                    </li>
+                    <li className='listCon'>Heading3
+                    <p className='listPera'>10,671</p>
+                    </li>
+                    <li className='listCon'>Heading4
+                    <p className='listPera'>6,562</p>
+                    </li>
+                </ul>
                 </div>
                 <LineChart width={1000} height={456} data={data}
                     margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>

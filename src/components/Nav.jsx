@@ -41,12 +41,12 @@ const Nav = () => {
       <button>Button1</button>
       <div className='icons'>
         <div className='icon'>
-          <a className='nav-link' href='#'>
+          <a className='nav-link' >
             <i className='fas fa-info-circle'></i>
           </a>
         </div>
         <div className='icon'>
-          <a className='nav-link' href='#'>
+          <a className='nav-link' >
             <i className='fas fa-bell'></i>
           </a>
         </div>
@@ -66,25 +66,25 @@ const Nav = () => {
           </a>
           <ul className='dropdown-menu' aria-labelledby='dropdownMenuButton1'>
             <li>
-              <a className='dropdown-item' href='#'>
+              <a className='dropdown-item' >
                 <i className='fas fa-handshake'></i>
                 {'  '}Menu 1
               </a>
             </li>
             <li>
-              <a className='dropdown-item' href='#'>
+              <a className='dropdown-item' >
                 <i className='fas fa-handshake'></i>
                 {'  '}Menu 2
               </a>
             </li>
             <li>
-              <a className='dropdown-item' href='#'>
+              <a className='dropdown-item' >
                 <i className='fas fa-handshake'></i>
                 {'  '}Menu 3
               </a>
             </li>
             <li>
-              <a className='dropdown-item' href='#'>
+              <a className='dropdown-item' >
                 Progress Bar
                 (1500/2000)
               </a>
@@ -100,7 +100,7 @@ const Nav = () => {
               </div>
             </li>
             <li>
-              <a className='dropdown-item' href='#'>
+              <a className='dropdown-item' >
               <i class="fas fa-sign-out-alt"></i>
                 {'  '}Logout
               </a>
