@@ -201,3 +201,7 @@ body {
   box-sizing: border-box;
   overflow: hidden;
 }
+
+.dropdown {
+  background-color: white;
+}
