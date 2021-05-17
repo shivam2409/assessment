@@ -69,11 +69,19 @@ const Nav = () => {
                 {'  '}Menu Option 3
               </a>
             </li>
-          
+            <li className='item-border pBar-color '>
+              <a className='dropdown-item'>
+                <span className='pg-bar'>RESOURCES</span>
+              </a>
+            </li>
+            <li className='item-border'>
+              <a className='dropdown-item'>
+              <i class="fas fa-mobile"></i>
+                {'  '}Menu Option 4
+              </a>
+            </li>
           </ul>
           </div>
-
-
           <div className='icon'>
             <a
               className='nav-link'
